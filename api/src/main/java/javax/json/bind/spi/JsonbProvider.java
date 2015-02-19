@@ -148,7 +148,7 @@ public abstract class JsonbProvider {
         Iterator<JsonbProvider> it = loader.iterator();
         while (it.hasNext()) {
             JsonbProvider provider = it.next();
-            if (provider.getClass().getName().equals(provider.getClass().getName())) {
+            if (providerName.getClass().getName().equals(provider.getClass().getName())) {
                 return provider;
             }
         }
