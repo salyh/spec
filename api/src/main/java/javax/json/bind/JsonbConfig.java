@@ -39,6 +39,7 @@
  */
 package javax.json.bind;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -139,6 +140,15 @@ public class JsonbConfig {
      */
     public final Object getProperty(final String name) throws JsonbConfigException {
         return configuration.get(name);
+    }
+    
+    /**
+     * Return all configuration properties as an unmodifiable map.
+     *
+     * @return All configuration properties as an unmodifiable map
+     */
+    public final Map<String, Object> getAsMap() {
+        return Collections.unmodifiableMap(configuration);
     }
 
     /**
